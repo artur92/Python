@@ -9,6 +9,9 @@ Este es un archivo temporal.
 Return the max of 2 num
 http://www.pythondiario.com/2013/05/ejercicios-en-python-parte-1.html
 """
+ 
+#list.append(elem)
+
 # 1
 def max2(num1,num2):
     if(num1 > num2):
@@ -104,7 +107,7 @@ def procedimiento(values):
     for i in values:
         print( i*"x") 
         
-# Print the first repeat letter inside a word
+# Print the first repeat letter inside a word 11
 def repeat(word):
    
     for i in range(len(word)):
@@ -115,9 +118,88 @@ def repeat(word):
                 return word[i]
             
     return False
+# Part 2   
             
+# Print the biggest number on a lis 12
+def max_in_list(lista):
+    mayor=0
+    for i in range (len(lista)):
+        if lista[i]>mayor:
+            mayor=lista[i]
+    return mayor
+
+# Print the biggest string of a list 13
+def longer_String (lista):
+    mayor = 0
+    largo = ""
+    for i in lista:
+        #print(i)
+        if len(i) > mayor:
+            mayor = len(i)
+            largo = i
+    return largo
+
+'''Wirte a function with 2 input, a list of words and the other only a number n. The 
+function should return the words that have more letters that the secon parameter n 14
+'''
+def filter_words(lista,n):
+    result = []
+    for i in lista:
+        if len(i)>n:
+            result.append(i)
             
-            
+    return result
+
+'''
+Ask to the user to input a string a return  how many upper case are in the list 15
+'''
+def input_list():
+    
+   txt = input("Type something to test this out: ")  
+   print( "Is this what you just said?", txt)  
+   print(txt[1])
+   count = 0
+   for i in range(len(txt)):
+       if txt[i].isupper():
+           count +=1       
+    
+   return count
+
+#Input a bin number and convert to int 16
+def binary_hex(num): 
+       
+    return int(num,2)
+
+#Input a list of numbers and print the ones that are bigger than 20
+def filter_ages(lista):
+    lista2 = []
+    for i in lista:
+        if i>20:            
+            lista2.append(i)
+    return lista2 
+
+#Input a list of names and find which ones start with the second parameter
+# Print the biggest string of a list 13
+def ini_name(lista, n):
+    result = []
+    for i in range (len(lista)):
+        if lista[i][0] == "A":
+            result.append(lista[i])
+        print(lista[i][0])
+    
+    return result 
+
+
+   
+       
+        
+        
+       
+
+
+
+    
+   
             
         
         
